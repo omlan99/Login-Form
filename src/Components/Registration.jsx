@@ -1,4 +1,11 @@
 const Registration = () => {
+    const handleRegister = e =>{
+        e.preventDefault()
+        const userName = e.target.userName.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email,userName,password)
+    }
   return (
     <div>
       <div className="hero bg-base-200 min-h-screen">
@@ -8,14 +15,15 @@ const Registration = () => {
            
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <form className="card-body">
+            <form className="card-body" onSubmit={handleRegister}>
             <div className="form-control">
                 <label className="label">
-                  <span className="label-text">First Name</span>
+                  <span className="label-text">User Name</span>
                 </label>
                 <input
                   type="Text"
                   placeholder="User Name"
+                  name="userName"
                   className="input input-bordered"
                   required
                 />
@@ -27,6 +35,7 @@ const Registration = () => {
                 <input
                   type="email"
                   placeholder="email"
+                  name="email"
                   className="input input-bordered"
                   required
                 />
@@ -38,13 +47,14 @@ const Registration = () => {
                 <input
                   type="password"
                   placeholder="password"
+                  name="password"
                   className="input input-bordered"
                   required
                 />
                 
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary">Register</button>
               </div>
             </form>
           </div>
