@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Registration = () => {
     const handleRegister = e =>{
         e.preventDefault()
@@ -57,6 +59,7 @@ const Registration = () => {
                 <button className="btn btn-primary">Register</button>
               </div>
             </form>
+            <p>Alredy have an account! <Link className="text-blue-500" to='/login'>Login Now</Link></p>
           </div>
         </div>
       </div>

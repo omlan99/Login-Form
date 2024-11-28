@@ -10,6 +10,7 @@ import Root from './Components/Layout/Root.jsx';
 import Home from './Components/Home.jsx';
 import Login from './Components/Login.jsx';
 import Registration from './Components/Registration.jsx';
+import AuthProvider from './Provider/AuthProvider.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,9 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    {/* Imported the component named AuthProvider which has the context authContext */}
+      <AuthProvider>
       <RouterProvider router={router} />
+      </AuthProvider>
   </StrictMode>,
 )
