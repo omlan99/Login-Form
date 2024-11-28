@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+    const {name} = useContext(AuthContext)
+    console.log(name)
   const navlinks = (
     <>
       <li className="mr-2">
